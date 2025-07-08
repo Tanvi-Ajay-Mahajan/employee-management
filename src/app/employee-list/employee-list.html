@@ -1,0 +1,41 @@
+<div class="container-fluid mt-4">
+  <div class="card shadow">
+    <div class="card-header bg-warning text-white">
+      <h5 class="mb-0">Employee List</h5>
+    </div>
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Sr No</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>date Of Joining</th>
+            <th>employee Type</th>
+            <th>Department</th>
+            <th>Designation</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+  <tr *ngFor="let emp of employeeList; let i = index">
+  <td>{{ i + 1 }}</td>
+  <td>{{ emp.fullName }}</td>
+  <td>{{ emp.phone }}</td>
+  <td>{{ emp.email }}</td>
+  <td>{{ emp.dateOfJoining }}</td>
+  <td>{{ emp. employeeType}}</td>
+  <td>{{ emp.departmentId }}</td>
+  <td>{{ emp.designationId }}</td>
+
+<td>
+  <button class="btn btn-danger" (click)="deleteEmployee(emp.id)">Delete</button>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
